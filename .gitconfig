@@ -1,0 +1,91 @@
+# Use `git config --list` to see all options.
+[user]
+	name = Some User
+	email = user@github.com
+[github]
+	user = kgust
+[core]
+    #autocrlf = true
+	editor = mvim -f --nomru -c \"au VimLeave * !open -a iTerm\"
+    excludesfile = /Users/kgustavson/.gitignore_global
+    #pager = less -x4
+    #whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+[alias]
+    add-conflicted = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
+    aliases = !git config -l | grep alias | cut -c 7-
+    amend = commit --amend
+    assume = update-index --assume-unchanged
+    br = branch
+    changes = diff --name-status -r
+	ci = commit
+	co = checkout
+    dc = diff --cached
+    diffstat = diff --stat -r
+    #dl = !git ll -1
+    dw = diff --word-diff
+    edit-conflicted = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim -f `f`"
+    edit-modified = !mvim -f $(git ls-files -m)
+    gitkconflict = !gitk --left-right HEAD...MERGE_HEAD
+    graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f > /tmp/result.dot ; open /tmp/result.dot"
+    ign = ls-files -o -i --exclude-standard
+    k = !gitk
+    last = log -1 HEAD
+    lasttag = describe --tags --abbrev=0
+    lc = log ORIG_HEAD.. --stat --no-merges
+    lg = log -p
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    lp  = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    ls = ls-files
+    lu = log -u
+    new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
+    ours = !f() { git co --ours $@ && git add $@; }; f
+    pop = stash pop
+    prune-all = !git remote | xargs -n 1 git remote prune
+    s = status
+    ss = status -s
+    serve = daemon --reuseaddr --verbose --base-path=. --export-all ./.git
+    test = !phpunit -c app --colors
+    theirs = !f() { git co --theirs $@ && git add $@; }; f
+    unassume = update-index --no-assume-unchanged
+    undo = reset --hard
+    who = shortlog -s --
+    whois = "!sh -c 'git log -i -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -"
+    whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
+    whitespace = !git diff --check $(git hash-object -t tree /dev/null)
+[apply]
+    whitespace = warn
+[branch]
+    autosetupmerge = true
+    autosetuprebase = local
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+    ui = auto
+    #ui = true
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+[difftool]
+    ;tool = opendiff
+    tool = mvimdiff -f
+[mergetool]
+	;tool = opendiff
+    tool = mvimdiff -f
+[pull]
+    default = current
+[push]
+    #default = simple
+    default = upstream
