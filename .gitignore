@@ -27,6 +27,7 @@
 .vimbackup/
 .viminfo
 .vimrc
+.vimswap/
 .vimundo/
 .zcompdump
 .zshrc.zni
