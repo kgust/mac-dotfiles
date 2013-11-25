@@ -1,9 +1,52 @@
-# This is the default .slate file.
-# If no ~/.slate file exists this is the file that will be used.
-
+################################################################################
+## Configuration                                                               #
+################################################################################
 config defaultToCurrentScreen true
 config nudgePercentOf screenSize
 config resizePercentOf screenSize
+config windowHintsShowIcons true
+config windowHintsSpread true
+
+################################################################################
+## Aliases                                                                     #
+################################################################################
+
+# Miscellaneous
+alias leader esc;cmd
+alias showHint hint AOEUIDHTNSYXFBPKGMCW
+
+# Monitors
+alias mon-imac      0
+alias mon-tbolt     1
+
+# Abstract positions
+alias full          move screenOriginX;screenOriginY                  screenSizeX;screenSizeY
+alias lefthalf      move screenOriginX;screenOriginY                  screenSizeX/2;screenSizeY
+alias righthalf     move screenOriginX+screenSizeX/2;screenOriginY    screenSizeX/2;screenSizeY
+alias rightmost     move screenOriginX+screenSizeX*0.4;screenOriginY  screenSizeX*0.6;screenSizeY
+alias rightless     move screenOriginX+screenSizeX*0.6;screenOriginY  screenSizeX*0.4;screenSizeY
+alias leftmost      move screenOriginX;screenOriginY                  screenSizeX*0.6;screenSizeY
+alias leftless      move screenOriginX;screenOriginY                  screenSizeX*0.4;screenSizeY
+
+# Concrete positions
+alias 1-full        move screenOriginX;screenOriginY screenSizeX;screenSizeY                                    ${mon-imac}
+alias 1-left        move screenOriginX;screenOriginY screenSizeX/2;screenSizeY                                  ${mon-imac}
+alias 1-right       move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY                    ${mon-imac}
+alias 2-left        move screenOriginX;screenOriginY screenSizeX/2;screenSizeY                                  ${mon-tbolt}
+alias 2-right       move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY                    ${mon-tbolt}
+alias 2-righttop    move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY/2                  ${mon-tbolt}
+alias 2-rightbottom move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2 screenSizeX/2;screenSizeY/2    ${mon-tbolt}
+
+################################################################################
+## Bindings                                                                    #
+################################################################################
+
+# Grid
+bind g:${leader} grid
+
+# Window Hints
+#bind esc:cmd hint
+bind v:${leader} ${showHint}
 
 # Resize Bindings
 bind right:alt       resize +10% +0
@@ -17,8 +60,8 @@ bind down:ctrl;alt   resize +0   -10% bottom-right
 
 # Push Bindings
 bind right:ctrl;cmd  push right bar-resize:screenSizeX/2
-bind left:ctrl;cmd   push left  bar-resize:screenSizeX/2
-bind up:ctrl;cmd     push up    bar-resize:screenSizeY/2
+bind left:ctrl;cmd   push left  bar-resize:screenSizeX/2-5
+bind up:ctrl;cmd     push up    bar-resize:screenSizeY/2-5
 bind down:ctrl;cmd   push down  bar-resize:screenSizeY/2
 
 # Nudge Bindings
@@ -37,12 +80,9 @@ bind up:ctrl;alt;cmd    throw up    resize
 bind down:ctrl;alt;cmd  throw down  resize
 
 # Focus Bindings
-bind right:cmd    focus right
-bind left:cmd     focus left
-bind up:cmd       focus up
-bind down:cmd     focus down
-bind up:cmd;alt   focus behind
-bind down:cmd;alt focus behind
-
-# Window Hints
-bind esc:cmd hint
+#bind right:cmd    focus right
+#bind left:cmd     focus left
+#bind up:cmd       focus up
+#bind down:cmd     focus down
+#bind up:cmd;alt   focus behind
+#bind down:cmd;alt focus behind

@@ -89,3 +89,11 @@
 [push]
     #default = simple
     default = upstream
+[web]
+	browser = open
+[instaweb]
+    local = true
+    httpd = apache2 -f
+    port = 4321
+    ;browser = firefox
+    modulepath = /usr/lib/apache2/modules
