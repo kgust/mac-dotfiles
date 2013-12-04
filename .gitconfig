@@ -78,12 +78,12 @@
     added = yellow
     changed = green
     untracked = cyan
-[difftool]
-    ;tool = opendiff
-    tool = mvimdiff -f
+[diff]
+    tool = gvimdiff
+    #tool = opendiff
 [mergetool]
-	;tool = opendiff
-    tool = mvimdiff -f
+    tool = gvimdiff
+	#tool = opendiff
 [pull]
     default = current
 [push]
@@ -95,5 +95,5 @@
     local = true
     httpd = apache2 -f
     port = 4321
-    ;browser = firefox
+    #browser = firefox
     modulepath = /usr/lib/apache2/modules
