@@ -37,6 +37,11 @@ ZSH_THEME="robbyrussell"
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
+# Uncomment following line if you want to  shown in the command execution time stamp 
+# in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
+# yyyy-mm-dd
+# HIST_STAMPS="mm/dd/yyyy"
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
@@ -44,7 +49,7 @@ plugins=(history history-substring-search osx emoji-clock brew git git-extras gi
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
+# User configuration
 #export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/texbin
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin:$HOME/node_modules/.bin:$HOME/bin
 
@@ -57,8 +62,21 @@ source $HOME/.bash_aliases
 PATH=$PATH:/usr/local/share/python
 
 [[ -d $HOME/powerline/powerline/bindings/zsh/ ]] && source $HOME/powerline/powerline/bindings/zsh/powerline.zsh
+[[ -d /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/ ]] && source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 export PIP2EVAL_TMP_FILE_PATH=/tmp/shms
+# # Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # Drush
 export PATH=$PATH:/Applications/acquia-drupal/drush
