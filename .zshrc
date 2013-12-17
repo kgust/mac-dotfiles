@@ -45,8 +45,8 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(history history-substring-search osx emoji-clock brew git git-extras git-hubflow git-remote-branch gitfast github ruby bundler gem coffee node npm rsync vagrant rvm tmux symfony2 themes vi-mode vundle web-search terminalapp)
-
+#plugins=(history history-substring-search osx emoji-clock brew git git-extras git-hubflow git-remote-branch gitfast github ruby bundler gem coffee node npm rsync vagrant rvm tmux symfony2 themes vi-mode vundle web-search terminalapp)
+plugins=(history history-substring-search osx emoji-clock brew git-extras gitfast ruby bundler gem coffee node npm rsync vagrant rvm tmux symfony2 themes tmuxinator urltools vi-mode vundle web-search)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -65,12 +65,12 @@ PATH=$PATH:/usr/local/share/python
 [[ -d /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/ ]] && source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 export PIP2EVAL_TMP_FILE_PATH=/tmp/shms
-# # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='mvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
