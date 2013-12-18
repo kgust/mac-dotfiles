@@ -1,7 +1,7 @@
 # ~/.tmuxinator/lead-api.yml
 
-name: ProjectNorth
-root: ~/Sites/lead-api
+name: quiz
+root: ~/Sites/quiz2013/
 
 # Optional tmux socket
 # socket_name: foo
@@ -19,14 +19,8 @@ root: ~/Sites/lead-api
 # tmux_command: byobu
 
 windows:
-  - editor:
-      layout: equal-horizontal
-      panes:
-        - vim .
-        - #empty
-  - vagrant: vagrant up && vagrant ssh
-  - logs:
-      layout: equal-horizontal
-      panes:
-        - htop
-        - tail -f app/logs/dev.log
+  - editor: vim
+  - server:
+     panes:
+       - jekyll: jekyll serve -w
+       - web: php -S 0.0.0.0:8000 -t php
