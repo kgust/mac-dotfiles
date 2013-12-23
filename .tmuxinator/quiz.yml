@@ -22,5 +22,5 @@ windows:
   - editor: vim
   - server:
      panes:
-       - jekyll: jekyll serve -w
-       - web: php -S 0.0.0.0:8000 -t php
+       - jekyll: jekyll build -w
+       - web: php -S 0.0.0.0:4000 -t php

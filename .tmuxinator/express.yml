@@ -1,7 +1,7 @@
-# ~/.tmuxinator/lead-api.yml
+# ~/.tmuxinator/express.yml
 
-name: ProjectNorth
-root: ~/Sites/lead-api
+name: express
+root: ~/Sites/express/
 
 # Optional tmux socket
 # socket_name: foo
@@ -20,14 +20,9 @@ root: ~/Sites/lead-api
 
 windows:
   - editor:
-      layout: equal-horizontal
+      layout: main-horizontal
       panes:
-        - vim .
-        - #empty
-  - vagrant: vagrant up && vagrant ssh
-  - logs:
-      layout: equal-horizontal
-      panes:
-        #- htop
-        - testem
-        - tail -f app/logs/dev.log
+        - #guard
+        - vim app.js
+  - server: DEBUG=express:* node app
+  - logs: #tail -f logs/development.log
