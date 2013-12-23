@@ -46,7 +46,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #plugins=(history history-substring-search osx emoji-clock brew git git-extras git-hubflow git-remote-branch gitfast github ruby bundler gem coffee node npm rsync vagrant rvm tmux symfony2 themes vi-mode vundle web-search terminalapp)
-plugins=(history history-substring-search osx emoji-clock brew git-extras gitfast ruby bundler gem coffee node npm rsync vagrant rvm tmux symfony2 themes tmuxinator urltools vi-mode vundle web-search)
+plugins=(history history-substring-search osx emoji-clock brew git-extras gitfast ruby gem coffee node npm rsync vagrant rvm tmux symfony2 themes tmuxinator urltools vi-mode vundle web-search)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
