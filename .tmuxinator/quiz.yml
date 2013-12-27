@@ -1,7 +1,7 @@
 # ~/.tmuxinator/lead-api.yml
 
 name: quiz
-root: ~/Sites/quiz2013/
+root: ~/Sites/quiz-dtedesigns.rhcloud.com/
 
 # Optional tmux socket
 # socket_name: foo
@@ -22,5 +22,5 @@ windows:
   - editor: vim
   - server:
      panes:
-       - jekyll: jekyll build -w
-       - web: php -S 0.0.0.0:4000 -t php
+       - jekyll: jekyll serve -w
+       #- web: php -S 0.0.0.0:4000 -t php
