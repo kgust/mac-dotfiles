@@ -1,7 +1,7 @@
-# ~/.tmuxinator/lead-api.yml
+# ~/.tmuxinator/ctksound.yml
 
-name: ProjectNorth
-root: ~/Sites/lead-api
+name: ctksound
+root: ~/Sites/ctksound.org
 
 # Optional tmux socket
 # socket_name: foo
@@ -22,12 +22,6 @@ windows:
   - editor:
       layout: main-horizontal
       panes:
-        - #empty
+        - #bundle exec guard
         - vim .
-  - logs:
-      layout: equal-horizontal
-      panes:
-        #- htop
-        - testem
-        - tail -f app/logs/dev.log
-  - vagrant: vagrant up && vagrant ssh
+  - server: jekyll serve -w
