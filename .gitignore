@@ -1,5 +1,4 @@
 # MacBook Pro
-.CFUserTextEncoding
 .DS_Store
 .Trash/
 .bash_history
@@ -8,12 +7,15 @@
 .config/
 .cups/
 .dbgpavim.trace
+.dbshell
 .fontconfig/
 .gem/
+.geeknote/
 .gitk
 .histfile
 .inkscape-etc/
 .lesshst
+.oh-my-zsh/
 .openshift/
 .node-gyp/
 .npm/
@@ -31,8 +33,12 @@
 .vimrc
 .vimswap/
 .vimundo/
+.w3m/
+.wireshark*
 .zcompdump
 .zshrc.zni
+.z*history*
+.zprezto/
 Applications/
 Desktop/
 Documents/
@@ -147,3 +153,4 @@ slate.map
 slate2
 synergy.conf
 |slate
+*.ova
