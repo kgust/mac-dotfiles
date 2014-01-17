@@ -52,6 +52,7 @@ Public/
 Sites/
 VirtualBox VMs/
 bin/
+.pentadactyl/
 
 # iMac
 .Xauthority
@@ -79,6 +80,7 @@ bin/
 .gitk
 .gnome2
 .guard_history
+.htoprc
 .inkscape-etc
 .lesshst
 .links
