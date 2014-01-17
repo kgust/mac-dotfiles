@@ -79,6 +79,7 @@ bin/
 .gitk
 .gnome2
 .guard_history
+.htoprc
 .inkscape-etc
 .lesshst
 .links

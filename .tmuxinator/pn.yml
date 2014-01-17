@@ -20,14 +20,17 @@ root: ~/Sites/lead-api
 
 windows:
   - editor:
+      layout: 533f,176x80,0,0[176x69,0,0,0,176x10,0,70,3]
+      panes:
+        - vim
+        - #empty
+  - logs:
       layout: main-horizontal
       panes:
-        - #empty
-        - vim
-  - logs:
-      layout: equal-horizontal
-      panes:
-        #- htop
         - testem
         - tail -f app/logs/dev.log
-  - vagrant: vagrant up && vagrant ssh
+        - vagrant ssh -c "sudo tail -f /var/log/httpd/access_log"
+  - vagrant:
+    - vagrant up
+    - vagrant ssh
+    - cd vhosts/leadssn/
