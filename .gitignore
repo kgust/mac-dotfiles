@@ -53,6 +53,14 @@ Sites/
 VirtualBox VMs/
 bin/
 .pentadactyl/
+.CFUserTextEncoding
+.dropbox*
+.dvdcss/
+Dropbox/
+.mplayer/
+.serverauth.18267
+.vnc/
+.zcompcache/
 
 # iMac
 .Xauthority
