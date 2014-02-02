@@ -61,6 +61,12 @@ Dropbox/
 .serverauth.18267
 .vnc/
 .zcompcache/
+.zlogin
+.zlogout
+.zpreztorc
+.zprofile
+.zshenv
+.zshrc
 
 # iMac
 .Xauthority
