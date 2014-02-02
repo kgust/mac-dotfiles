@@ -1,7 +1,7 @@
 # ~/.tmuxinator/ctksound.yml
 
 name: ctksound
-root: ~/Sites/ctksound.org
+root: ~/Sites/ctksound
 
 # Optional tmux socket
 # socket_name: foo
@@ -19,9 +19,5 @@ root: ~/Sites/ctksound.org
 # tmux_command: byobu
 
 windows:
-  - editor:
-      layout: main-horizontal
-      panes:
-        - #bundle exec guard
-        - vim .
+  - editor: vim 2014/_posts/
   - server: jekyll serve -w
