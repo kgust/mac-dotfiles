@@ -103,3 +103,6 @@ bind  right:${hyper}     throw right
 # Application bindings
 bind e:${hyper} focus 'MacVim'
 bind i:${hyper} focus 'iTerm'
+
+# Test Cases
+source .slate.test if_exists
