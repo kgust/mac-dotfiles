@@ -1,8 +1,15 @@
-# MacBook Pro
-.DS_Store
-.Trash/
-.bash_history
+# Universal
+*.gz
 .cache/
+.cheat/
+.DS_Store
+.gnupg/
+.ssh
+.subversion
+.Trash/
+
+# MacBook Pro
+.bash_history
 .composer/
 .config/
 .cups/
@@ -58,7 +65,7 @@ bin/
 .dvdcss/
 Dropbox/
 .mplayer/
-.serverauth.18267
+.serverauth*
 .vnc/
 .zcompcache/
 .zlogin
@@ -111,8 +118,6 @@ Dropbox/
 .sdedit.conf
 .sh_history
 #.slate
-.ssh
-.subversion
 .vagrant.d
 .vim
 .vim_mru_files
