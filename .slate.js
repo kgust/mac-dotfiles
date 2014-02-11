@@ -4,7 +4,7 @@
 
 // CONFIGURATION
 slate.log("[SLATE] -------------- Begin Loading Javascript Config --------------");
-
+/*
 slate.configAll({
     'checkDefaultsOnLoad':       true,
     'defaultToCurrentScreen':    true,
@@ -30,7 +30,9 @@ var monTbolt = '1';
 
 // BINDINGS
 
+*/
 slate.bindAll({
+/*
     // Grid
     'g:'+leader: slate.operation('grid'),
 
@@ -61,6 +63,7 @@ slate.bindAll({
 
     'pad7'+hyper: slate.operation('corner', { 'direction': 'top-left', 'style': 'resize:screenSizeX/2;screenSizeY/2'}),
     'pad9'+hyper: slate.operation('corner', { 'direction': 'top-right', 'style': 'resize:screenSizeX/2;screenSizeY/2'}),
+*/
 /*
 # Push Bindings - New Hyper Binding# Keypad Bindings
 bind pad7:${hyper}   corner  top-left     resize:screenSizeX/2;screenSizeY/2
@@ -74,12 +77,45 @@ bind pad2:${hyper}   push    down         bar-resize:screenSizeY/2
 bind pad3:${hyper}   corner  bottom-right resize:screenSizeX/2;screenSizeY/2
 */
 
+/*
+# Throw Bindings
+bind  left:${hyper}      throw left
+bind  right:${hyper}     throw right
+*/
+    'left:ctrl;shift;alt;cmd': function(win) {
+        slate.log('[SLATE] Throwing left!');
+        slate.log('[SLATE] ' + win.topLeft().x);
+        slate.log('[SLATE] ' + win.topLeft().y);
+        slate.log('[SLATE] ' + win.screen().id());
+        var x = win.topLeft().x;
+        var y = win.topLeft().y;
+        success = win.move({ screen: '0' });
+        slate.log('[SLATE] ' + win.topLeft().x);
+        slate.log('[SLATE] ' + win.topLeft().y);
+        slate.log('[SLATE] ' + win.screen().id());
+        slate.log('[SLATE] ' + success);
+    },
+
+    'right:ctrl;shift;alt;cmd': function(win) {
+        slate.log('[SLATE] Throwing right!');
+        slate.log('[SLATE] ' + win.topLeft().x);
+        slate.log('[SLATE] ' + win.topLeft().y);
+        slate.log('[SLATE] ' + win.screen().id());
+        var x = win.topLeft().x;
+        var y = win.topLeft().y;
+        success = win.move({ screen: '1' });
+        slate.log('[SLATE] ' + win.topLeft().x);
+        slate.log('[SLATE] ' + win.topLeft().y);
+        slate.log('[SLATE] ' + win.screen().id());
+        slate.log('[SLATE] ' + success);
+    }
+
 });
 
 
 // Test Cases
-//slate.source(".slate.test", true);
-//slate.source(".slate.test.js", true);
+//slate.source('.slate.test', true);
+//slate.source('.slate.test.js', true);
 
 // Log that we're done configuring
-slate.log("[SLATE] -------------- Finished Loading Config --------------");
+slate.log('[SLATE] -------------- Finished Loading Config --------------');

@@ -7,6 +7,7 @@
 .ssh
 .subversion
 .Trash/
+.gitshots/
 
 # MacBook Pro
 .bash_history
@@ -22,7 +23,6 @@
 .histfile
 .inkscape-etc/
 .lesshst
-.oh-my-zsh/
 .openshift/
 .node-gyp/
 .npm/
@@ -109,7 +109,6 @@ Dropbox/
 .mysql_history
 .node-gyp
 .npm
-#.oh-my-zsh
 .pearrc
 .php_history
 .pip
