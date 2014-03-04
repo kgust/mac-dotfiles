@@ -55,8 +55,9 @@ bind g:${leader} grid
 bind v:${leader} ${showHint}
 
 # Resize Bindings
-bind right:alt       resize +10% +0
-bind left:alt        resize -10% +0
+# KG: These first two conflict with Mac OS shortcuts
+#bind right:alt       resize +10% +0
+#bind left:alt        resize -10% +0
 bind up:alt          resize +0   -10%
 bind down:alt        resize +0   +10%
 bind right:ctrl;alt  resize -10% +0 bottom-right
@@ -83,8 +84,9 @@ bind pad2:${hyper}   push    down         bar-resize:screenSizeY/2
 bind pad3:${hyper}   corner  bottom-right resize:screenSizeX/2;screenSizeY/2
 
 # Nudge Bindings
-bind right:shift;alt nudge +10% +0
-bind left:shift;alt  nudge -10% +0
+# KG: These first two conflict with Mac OS shortcuts
+#bind right:shift;alt nudge +10% +0
+#bind left:shift;alt  nudge -10% +0
 bind up:shift;alt    nudge +0   -10%
 bind down:shift;alt  nudge +0   +10%
 
