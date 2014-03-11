@@ -1,0 +1,19 @@
+---
+last_check:
+  etag: '"1ca0494a3c23383e7ecb75b182d85976"'
+  version: 1.6.7
+  at: 1394560144
+checked_completion: true
+completion_version: 1.6.7
+endpoints:
+  https://api.travis-ci.org/:
+    access_token: v-uBqf5HSZow5waQRURWyw
+  https://api.travis-ci.com/:
+    access_token: CCMpLWxJVU9Bktg6WxJS9Q
+repos:
+  kgust/Messi:
+    endpoint: https://api.travis-ci.org/
+  kgust/travis_test:
+    endpoint: https://api.travis-ci.org/
+  kgust/dotvim:
+    endpoint: https://api.travis-ci.org/

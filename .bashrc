@@ -16,3 +16,6 @@ export PIP2EVAL_TMP_FILE_PATH=/tmp/shms
 
 # Drush
 export PATH=$PATH:/Applications/acquia-drupal/drush
+
+# added by travis gem
+[ -f /Users/kgustavson/.travis/travis.sh ] && source /Users/kgustavson/.travis/travis.sh
