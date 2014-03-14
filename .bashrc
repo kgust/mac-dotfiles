@@ -10,7 +10,7 @@ source $HOME/.bash_aliases
 
 PATH=$PATH:/usr/local/share/python
 
-[[ -f $HOME/powerline/powerline/bindings/bash/powerline.sh ]] && source $HOME/powerline/powerline/bindings/bash/powerline.sh
+# [[ -f $HOME/powerline/powerline/bindings/bash/powerline.sh ]] && source $HOME/powerline/powerline/bindings/bash/powerline.sh
 
 export PIP2EVAL_TMP_FILE_PATH=/tmp/shms
 

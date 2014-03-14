@@ -56,9 +56,9 @@ slate.bindAll({
     // Push Bindings - New Hyper Bindings
     // NOTE: some of these may *not* work if you have not removed the expose/spaces/mission control bindings
     'f:'+hyper: slate.operation('push', { 'direction': 'left',  'style': 'bar-resize:screenSizeX' }),
-    'h:'+hyper: slate.operation('push', { 'direction': 'left',  'style': 'bar-resize:screenSizeX/2-5' }),
+    'h:'+hyper: slate.operation('push', { 'direction': 'left',  'style': 'bar-resize:screenSizeX/2-3' }),
     'j:'+hyper: slate.operation('push', { 'direction': 'down',  'style': 'bar-resize:screenSizeX/2' }),
-    'k:'+hyper: slate.operation('push', { 'direction': 'up',    'style': 'bar-resize:screenSizeX/2-5' }),
+    'k:'+hyper: slate.operation('push', { 'direction': 'up',    'style': 'bar-resize:screenSizeX/2-3' }),
     'l:'+hyper: slate.operation('push', { 'direction': 'right', 'style': 'bar-resize:screenSizeX/2' }),
 
     'pad7'+hyper: slate.operation('corner', { 'direction': 'top-left', 'style': 'resize:screenSizeX/2;screenSizeY/2'}),
@@ -67,9 +67,9 @@ slate.bindAll({
 /*
 # Push Bindings - New Hyper Binding# Keypad Bindings
 bind pad7:${hyper}   corner  top-left     resize:screenSizeX/2;screenSizeY/2
-bind pad8:${hyper}   push    up           bar-resize:screenSizeY/2-5
+bind pad8:${hyper}   push    up           bar-resize:screenSizeY/2-3
 bind pad9:${hyper}   corner  top-right    resize:screenSizeX/2;screenSizeY/2
-bind pad4:${hyper}   push    left         bar-resize:screenSizeX/2-5
+bind pad4:${hyper}   push    left         bar-resize:screenSizeX/2-3
 bind pad5:${hyper}   push    left         bar-resize:screenSizeX
 bind pad6:${hyper}   push    right        bar-resize:screenSizeX/2
 bind pad1:${hyper}   corner  bottom-left  resize:screenSizeX/2;screenSizeY/2
