@@ -8,6 +8,10 @@
 .subversion
 .Trash/
 .gitshots/
+.atom/
+.gitsh_history
+.vim-flavor/
+.wgetrc
 
 # MacBook Pro
 .bash_history
