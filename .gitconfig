@@ -1,29 +1,31 @@
-# vim: set noet ts=4 sw=4 sts=4
-# Use `git config --list` to see all options.
+; vim: set noet ts=4 sw=4 sts=4
+; Use `git config --list` to see all options.
 [user]
 	name = Some User
-	email = user@github.com
+	email = user@example.com
 [github]
 	user = kgust
+
 [core]
-	#autocrlf = true
-	#editor = mvim -f --nomru -c \"au VimLeave * !open -a iTerm\"
+	;autocrlf = true
+	;editor = mvim -f --nomru -c \"au VimLeave * !open -a iTerm\"
     editor = vim
 	excludesfile = /Users/kgustavson/.gitignore_global
-	#pager = less -x4
-	#whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	;pager = less -x4
+	;whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+
 [alias]
 	add-conflicted = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
 	aliases = !git config -l | grep alias | cut -c 7-
 	amend = commit --amend
 	assume = update-index --assume-unchanged
-	#br = branch
+	;br = branch
 	changes = diff --name-status -r
-	#ci = commit
-	#co = checkout
+	;ci = commit
+	;co = checkout
 	dc = diff --cached
 	diffstat = diff --stat -r
-	#dl = !git ll -1
+	;dl = !git ll -1
 	dw = diff --word-diff
 	edit-conflicted = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim -f `f`"
 	edit-modified = !vim -f $(git ls-files -m)
@@ -60,50 +62,68 @@
 	whois = "!sh -c 'git log -i -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -"
 	whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
 	whitespace = !git diff --check $(git hash-object -t tree /dev/null)
+
 [apply]
 	whitespace = warn
+
 [branch]
-	autosetupmerge = true
-	autosetuprebase = local
+	autosetupmerge = always
+	autosetuprebase = always
+
 [color]
 	branch = auto
 	diff = auto
 	status = auto
 	ui = auto
-	#ui = true
+	;ui = true
+
 [color "branch"]
 	current = yellow reverse
 	local = yellow
 	remote = green
+
 [color "diff"]
 	meta = yellow bold
 	frag = magenta bold
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+
 [color "status"]
 	added = yellow
 	changed = green
 	untracked = cyan
+
 [diff]
 	tool = gvimdiff
-	#tool = opendiff
-[merge]
-	tool = gvimdiff
-	#tool = opendiff
+	;tool = opendiff
+
 [pull]
 	default = current
+
 [push]
-	#default = simple
-	default = upstream
+	default = simple
+	;default = matching
+	;default = upstream
+
+[merge]
+    defaultToUpstream = true
+	tool = gvimdiff
+	;tool = opendiff
+
+[rebase]
+    ;autosquash = true
+
 [web]
 	browser = open
+
 [instaweb]
 	local = true
 	httpd = apache2 -f
 	port = 4321
-	#browser = firefox
+	;browser = firefox
 	modulepath = /usr/lib/apache2/modules
+
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f

@@ -3,6 +3,26 @@
 tap phinze/homebrew-cask
 install brew-cask
 
+cask install bettertouchtool
+cask install colloquy
+
+#cask install dropbox
+#cask install evernote
+#cask install firefox
+#cask install flux
+#cask install github
+#cask install google-chrome
+#cask install handbrake
+#cask install crashplan
+#cask install livereload
+#cask install macvim
+#cask install renamer
+#cask install sequel-pro
+#cask install skype
+#cask install sublime-text
+#cask install textexpander
+#cask install vlc
+
 #cask install airmail-beta
 #cask install anitrsi
 #cask install beamer
@@ -13,25 +33,16 @@ install brew-cask
 #cask install cloudup
 #cask install codekit
 #cask install colorschemer-studio
-#cask install crashplan
 #cask install divvy
-#cask install dropbox
-#cask install evernote
-#cask install firefox
 #cask install flowdock
-#cask install flux
 #cask install geekbench
 #cask install gitbox
-#cask install github
-#cask install google-chrome
 #cask install google-earth
-#cask install handbrake
 #cask install istat-menus
 #cask install join-me
 #cask install kaleidoscope
 #cask install keyboardcleantool
 #cask install limechat
-#cask install livereload
 #cask install macvim
 #cask install mamp
 #cask install mixxx
@@ -40,17 +51,11 @@ install brew-cask
 #cask install postbox
 #cask install puush
 #cask install rdio
-#cask install renamer
 #cask install sauce
-#cask install sequel-pro
-#cask install skype
 #cask install sourcetree
-#cask install sublime-text
-#cask install textexpander
 #cask install the-unarchiver
 #cask install totalfinder
 #cask install transmission
 #cask install transmit
 #cask install viscosity
-#cask install vlc
 #cask install zepheer
