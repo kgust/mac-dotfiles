@@ -5,6 +5,9 @@ install brew-cask
 
 cask install bettertouchtool
 cask install colloquy
+cask install virtualbox
+cask install vagrant
+cask install texshop
 
 #cask install dropbox
 #cask install evernote

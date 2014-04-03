@@ -25,11 +25,11 @@ windows:
         - vim
         - #empty
   - logs:
-      layout: even-vertical
+      layout: 52e3,310x72,0,0[310x44,0,0{155x44,0,0,1,154x44,156,0,9},310x27,0,45,4]]
       panes:
+        - bundle exec guard start
         - testem
         - tail -f app/logs/dev.log
-        - bundle exec guard start
         #- vagrant ssh -c "sudo tail -f /var/log/httpd/access_log"
   - vagrant:
     - vagrant up

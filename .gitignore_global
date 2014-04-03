@@ -9,3 +9,4 @@ logs
 .ruby*
 .rvrc
 .rvm*
+node_modules/
