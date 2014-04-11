@@ -5,9 +5,14 @@ install brew-cask
 
 cask install bettertouchtool
 cask install colloquy
+#cask install codekit
+#cask install google-chrome
+cask install google-chrome-canary
+cask install rescuetime
 cask install virtualbox
 cask install vagrant
 cask install texshop
+cask install the-unarchiver
 
 #cask install dropbox
 #cask install evernote
