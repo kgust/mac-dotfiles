@@ -3,14 +3,12 @@
 [user]
 	name = Some User
 	email = user@example.com
-[github]
-	user = kgust
 
 [core]
 	;autocrlf = true
 	;editor = mvim -f --nomru -c \"au VimLeave * !open -a iTerm\"
-    editor = vim
-	excludesfile = /Users/kgustavson/.gitignore_global
+    editor = mvim -v
+	excludesfile = /Users/kevin/.gitignore_global
 	;pager = less -x4
 	;whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 
@@ -27,8 +25,8 @@
 	diffstat = diff --stat -r
 	;dl = !git ll -1
 	dw = diff --word-diff
-	edit-conflicted = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim -f `f`"
-	edit-modified = !vim -f $(git ls-files -m)
+	edit-conflicted = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; mvim -v -f `f`"
+	edit-modified = !mvim -v -f $(git ls-files -m)
 	gitkconflict = !gitk --left-right HEAD...MERGE_HEAD
 	graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f > /tmp/result.dot ; open /tmp/result.dot"
 	ign = ls-files -o -i --exclude-standard

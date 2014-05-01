@@ -7,12 +7,14 @@ cask install bettertouchtool
 cask install colloquy
 #cask install codekit
 #cask install google-chrome
+cask install fluid
 cask install google-chrome-canary
+cask install handbrake
 cask install rescuetime
-cask install virtualbox
-cask install vagrant
 cask install texshop
 cask install the-unarchiver
+cask install vagrant
+cask install virtualbox
 
 #cask install dropbox
 #cask install evernote
