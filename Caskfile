@@ -3,18 +3,30 @@
 tap phinze/homebrew-cask
 install brew-cask
 
+cask install adium
+cask install atext
+cask install atom
 cask install bettertouchtool
-cask install colloquy
+cask install cakebrew
+cask install ccmenu
 #cask install codekit
-#cask install google-chrome
+cask install colloquy
 cask install fluid
+#cask install google-chrome
 cask install google-chrome-canary
+cask install growl-fork
 cask install handbrake
+cask install jewelrybox
+cask install launchrocket
+cask install minitimer
+#cask install phpstorm
+cask install phpstorm-eap
 cask install rescuetime
 cask install texshop
 cask install the-unarchiver
 cask install vagrant
 cask install virtualbox
+#cask install voicemac
 
 #cask install dropbox
 #cask install evernote
