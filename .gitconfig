@@ -4,6 +4,9 @@
 	name = Some User
 	email = user@example.com
 
+[github]
+	user = kgust
+
 [core]
 	;autocrlf = true
 	;editor = mvim -f --nomru -c \"au VimLeave * !open -a iTerm\"
@@ -45,6 +48,7 @@
 	new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
 	ours = !f() { git co --ours $@ && git add $@; }; f
 	pop = stash pop
+	poop = pop
     preview = log --oneline origin..HEAD 
 	prune-all = !git remote | xargs -n 1 git remote prune
 	s = status
@@ -66,7 +70,7 @@
 
 [branch]
 	autosetupmerge = always
-	autosetuprebase = always
+	;autosetuprebase = always
 
 [color]
 	branch = auto

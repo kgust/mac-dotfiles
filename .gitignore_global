@@ -10,3 +10,4 @@ logs
 .rvrc
 .rvm*
 node_modules/
+.idea/
