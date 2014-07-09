@@ -19,3 +19,7 @@ export PATH=$PATH:/Applications/acquia-drupal/drush
 
 # added by travis gem
 [ -f /Users/kgustavson/.travis/travis.sh ] && source /Users/kgustavson/.travis/travis.sh
+
+export PATH="$PATH:/Applications/Dev Desktop/drush"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
