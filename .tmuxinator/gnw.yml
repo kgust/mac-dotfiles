@@ -24,5 +24,10 @@ windows:
       panes:
         - vim
         - #empty
-  - server: ./artisan serve
-  - logs: tail -f app/storage/logs/laravel.log
+  - server:
+      layout: vertical 
+      panes:
+        - web: ./artisan serve
+        - selenium: phantomjs --webdriver=4444
+        #- logs: tail -f app/storage/logs/laravel.log
+        - logs: ./artisan tail
