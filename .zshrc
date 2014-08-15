@@ -57,6 +57,12 @@ export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/texb
 # If you have a bin folder in $HOME, add it to your path
 [[ -d ${HOME}/bin ]] && PATH=${PATH}:${HOME}/bin
 
+# Add composer bin to PATH
+PATH=$PATH:vendor/bin
+
+# Add NPM bin to PATH
+PATH=$PATH:node_modules/.bin
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
