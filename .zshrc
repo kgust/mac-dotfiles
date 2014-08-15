@@ -54,6 +54,9 @@ source $ZSH/oh-my-zsh.sh
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/texbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# If you have a bin folder in $HOME, add it to your path
+[[ -d ${HOME}/bin ]] && PATH=${PATH}:${HOME}/bin
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
