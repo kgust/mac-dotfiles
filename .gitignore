@@ -73,12 +73,6 @@ Dropbox/
 .serverauth*
 .vnc/
 .zcompcache/
-.zlogin
-.zlogout
-.zpreztorc
-.zprofile
-.zshenv
-.zshrc
 
 # iMac
 .Xauthority
@@ -134,7 +128,6 @@ Dropbox/
 .zcompdump*
 .zsh-update
 .zsh_history
-.zshrc
 Applications
 Desktop
 Documents
