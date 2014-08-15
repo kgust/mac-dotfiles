@@ -1,8 +1,8 @@
 ; vim: set noet ts=4 sw=4 sts=4
 ; Use `git config --list` to see all options.
 [user]
-	name = Some User
-	email = user@example.com
+	name = Kevin Gustavson
+	;email = user@example.com
 
 [github]
 	user = kgust
@@ -16,6 +16,18 @@
 	;whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 
 [alias]
+	; Github CLI
+	version = version
+	pull-request = pull-request
+	fork = fork
+	create = create
+	browse = browse
+	compare = compare
+	ci-status = ci-status
+	; release = release ;gh command only
+	; issues = issues   ;gh command only
+
+	; Regular
 	add-conflicted = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
 	aliases = !git config -l | grep alias | cut -c 7-
 	amend = commit --amend
@@ -23,7 +35,7 @@
 	;br = branch
 	changes = diff --name-status -r
 	;ci = commit
-	;co = checkout
+	co = checkout
 	dc = diff --cached
 	diffstat = diff --stat -r
 	;dl = !git ll -1

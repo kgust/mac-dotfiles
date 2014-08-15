@@ -11,3 +11,5 @@ logs
 .rvm*
 node_modules/
 .idea/
+_ide_helper.php
+*.zip
