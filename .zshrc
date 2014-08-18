@@ -51,10 +51,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# Enable vi keybindings
-bindkey -v
-
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/texbin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # If you have a bin folder in $HOME, add it to your path
