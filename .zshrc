@@ -54,14 +54,14 @@ source $ZSH/oh-my-zsh.sh
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# If you have a bin folder in $HOME, add it to your path
-[[ -d ${HOME}/bin ]] && PATH=${PATH}:${HOME}/bin
+# Add NPM bin to PATH
+PATH=node_modules/.bin:$PATH
 
 # Add composer bin to PATH
-PATH=$PATH:vendor/bin
+PATH=vendor/bin:$PATH
 
-# Add NPM bin to PATH
-PATH=$PATH:node_modules/.bin
+# If you have a bin folder in $HOME, add it to your path
+[[ -d ${HOME}/bin ]] && PATH=${HOME}/bin:${PATH}
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
