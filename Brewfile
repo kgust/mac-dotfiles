@@ -1,3 +1,11 @@
+# Install taps
+tap homebrew/completions
+tap homebrew/dupes
+tap homebrew/versions
+tap jingweno/gh
+tap josegonzalez/php
+tap thoughtbot/formulae
+
 # brew list -1
 install ant
 install apple-gcc42

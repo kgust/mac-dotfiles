@@ -3,6 +3,9 @@
 tap phinze/homebrew-cask
 install brew-cask
 
+tap caskroom/cask
+tap caskroom/versions
+
 cask install adium
 cask install atext
 cask install atom
