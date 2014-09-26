@@ -45,7 +45,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git ruby rvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -62,6 +62,8 @@ PATH=vendor/bin:$PATH
 
 # If you have a bin folder in $HOME, add it to your path
 [[ -d ${HOME}/bin ]] && PATH=${HOME}/bin:${PATH}
+
+. /usr/local/etc/profile.d/z.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -87,3 +89,8 @@ PATH=vendor/bin:$PATH
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# Enable direnv
+eval "$(direnv hook $0)"
