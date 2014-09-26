@@ -12,6 +12,7 @@
 .gitsh_history
 .vim-flavor/
 .wgetrc
+.netrc
 .sqlite_history
 
 # MacBook Pro
