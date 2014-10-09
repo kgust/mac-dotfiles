@@ -89,6 +89,9 @@ PATH=vendor/bin:$PATH
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias -s js=node
+alias -s php=php
+alias -s rb=ruby
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
