@@ -23,3 +23,5 @@ export PATH=$PATH:/Applications/acquia-drupal/drush
 export PATH="$PATH:/Applications/Dev Desktop/drush"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+export ANDROID_HOME=/usr/local/opt/android-sdk
