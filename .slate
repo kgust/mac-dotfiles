@@ -67,16 +67,20 @@ bind v:${leader} ${showHint}
 
 # Push Bindings - New Hyper Bindings
 bind f:${hyper}   push left     bar-resize:screenSizeX
-bind h:${hyper}   push left     bar-resize:screenSizeX/2-3
+bind h:${hyper}   push left     bar-resize:screenSizeX/2-2
 bind j:${hyper}   push down     bar-resize:screenSizeY/2
-bind k:${hyper}   push up       bar-resize:screenSizeY/2-3
+bind k:${hyper}   push up       bar-resize:screenSizeY/2-2
 bind l:${hyper}   push right    bar-resize:screenSizeX/2
+bind n:${hyper}   corner  bottom-left  resize:screenSizeX/2;screenSizeY/2
+bind u:${hyper}   corner  top-left     resize:screenSizeX/2;screenSizeY/2
+bind o:${hyper}   corner  top-right    resize:screenSizeX/2;screenSizeY/2
+#bind .:${hyper}   corner  bottom-right resize:screenSizeX/2;screenSizeY/2
 
 # Keypad Bindings
 bind pad7:${hyper}   corner  top-left     resize:screenSizeX/2;screenSizeY/2
-bind pad8:${hyper}   push    up           bar-resize:screenSizeY/2-3
+bind pad8:${hyper}   push    up           bar-resize:screenSizeY/2-2
 bind pad9:${hyper}   corner  top-right    resize:screenSizeX/2;screenSizeY/2
-bind pad4:${hyper}   push    left         bar-resize:screenSizeX/2-3
+bind pad4:${hyper}   push    left         bar-resize:screenSizeX/2-2
 bind pad5:${hyper}   push    left         bar-resize:screenSizeX
 bind pad6:${hyper}   push    right        bar-resize:screenSizeX/2
 bind pad1:${hyper}   corner  bottom-left  resize:screenSizeX/2;screenSizeY/2
