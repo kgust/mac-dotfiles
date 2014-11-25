@@ -59,13 +59,15 @@
 	lu = log -u
 	new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
 	ours = !f() { git co --ours $@ && git add $@; }; f
-	pop = stash pop
-	poop = pop
+	pop = stash pop --index
     preview = log --oneline origin..HEAD 
 	prune-all = !git remote | xargs -n 1 git remote prune
 	s = status
 	ss = status -s
 	serve = daemon --reuseaddr --verbose --base-path=. --export-all ./.git
+	sta = stash --all
+	stu = stash --untracked
+	tig = !tig
 	test = !phpunit -c app --colors
 	theirs = !f() { git co --theirs $@ && git add $@; }; f
 	unassume = update-index --no-assume-unchanged
@@ -139,5 +141,12 @@
 	modulepath = /usr/lib/apache2/modules
 
 [filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+	clean = git media clean %f
+	smudge = git media smudge %f
+	required = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.0.2/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
