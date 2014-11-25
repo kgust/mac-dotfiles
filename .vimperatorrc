@@ -1,0 +1,11 @@
+"3.8.3 (created: 2014/11/09 13:19:01)
+
+set hintchars=asdfghjklqwertyuiop
+source! /Users/kgustavson/.vimperatorrc.local
+
+colorscheme solarized_dark
+
+autocmd LocationChange .* js modes.passAllKeys = false
+autocmd LocationChange mail\\.google\\.com js modes.passAllKeys = true
+
+" vim: set ft=vimperator:
