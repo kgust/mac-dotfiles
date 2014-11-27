@@ -36,6 +36,7 @@
 	changes = diff --name-status -r
 	;ci = commit
 	co = checkout
+	d = diff
 	dc = diff --cached
 	diffstat = diff --stat -r
 	;dl = !git ll -1

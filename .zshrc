@@ -52,6 +52,9 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# Enable vi keybindings
+bindkey -v
+
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -111,4 +114,3 @@ export DOCKER_HOST=tcp://172.17.8.101:2375
 export ETCDCTL_PEERS=http://172.17.8.101:4001
 export FLEETCTL_ENDPOINT=http://172.17.8.101:4001
 [[ -d $HOME/coreos-osx/bin ]] && PATH=$PATH:$HOME/coreos-osx/bin
-
