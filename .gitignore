@@ -16,26 +16,35 @@
 .sqlite_history
 
 # MacBook Pro
+.CFUserTextEncoding
+.aws/
 .bash_history
 .composer/
 .config/
 .cups/
 .dbgpavim.trace
 .dbshell
+.dropbox*
+.dvdcss/
+.fleetctl/
 .fontconfig/
-.gem/
 .geeknote/
+.gem/
 .gitk
+.grunt-init/
 .histfile
 .inkscape-etc/
 .lesshst
-.openshift/
+.mplayer/
 .node-gyp/
 .npm/
+.openshift/
 .pearrc
+.pentadactyl/
 .pip/
 .rbenv/
 .s3cfg
+.serverauth*
 .ssh/
 .subversion/
 .vagrant.d/
@@ -46,16 +55,19 @@
 .vimrc
 .vimswap/
 .vimundo/
+.vnc/
 .w3m/
 .wireshark*
-.zcompdump
-.zshrc.zni
 .z*history*
+.zcompcache/
+.zcompdump
 .zprezto/
+.zshrc.zni
 Applications/
 Desktop/
 Documents/
 Downloads/
+Dropbox/
 Google Drive/
 Library/
 Movies/
@@ -65,15 +77,7 @@ Public/
 Sites/
 VirtualBox VMs/
 bin/
-.pentadactyl/
-.CFUserTextEncoding
-.dropbox*
-.dvdcss/
-Dropbox/
-.mplayer/
-.serverauth*
-.vnc/
-.zcompcache/
+coreos-osx/
 
 # iMac
 .Xauthority
@@ -181,6 +185,7 @@ synergy.conf
 .boris_history
 .drush/
 .nvimlog
+.nviminfo
 .pentadactylrc
 .profile
 .pry_history
@@ -193,5 +198,4 @@ tags
 tasks-times.csv
 tasks.txt
 .travis/config.yml
-
 .z

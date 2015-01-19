@@ -1,7 +1,7 @@
 # ~/.tmuxinator/lead-api.yml
 
 name: quiz
-root: ~/Sites/quiz-dtedesigns.rhcloud.com/
+root: ~/Sites/quiz/
 
 # Optional tmux socket
 # socket_name: foo
@@ -19,7 +19,7 @@ root: ~/Sites/quiz-dtedesigns.rhcloud.com/
 # tmux_command: byobu
 
 windows:
-  - editor: vim
+  - editor:
   - server:
      panes:
        - jekyll: jekyll serve -w

@@ -25,3 +25,6 @@ export PATH="$PATH:/Applications/Dev Desktop/drush"
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 export ANDROID_HOME=/usr/local/opt/android-sdk
+
+# AWS CLI
+complete -C `which aws_completer` aws

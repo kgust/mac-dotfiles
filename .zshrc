@@ -1,3 +1,5 @@
+export EDITOR=vim
+
 unset VENDOR
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -85,17 +87,7 @@ PATH=vendor/bin:$PATH
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias -s js=node
-alias -s php=php
-alias -s rb=ruby
+source $HOME/.aliases
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
