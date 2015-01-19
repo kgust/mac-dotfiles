@@ -4,11 +4,10 @@ name: GoNorth-Websites
 root: ~/Sites/gonorth-websites
 
 # Optional tmux socket
-socket_name: gnw
+# socket_name: foo
 
 # Runs before everything. Use it to start daemons etc.
 # pre: sudo /etc/rc.d/mysqld start
-pre: vagrant up
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
@@ -21,18 +20,17 @@ pre: vagrant up
 
 windows:
   - editor:
-      layout: 533f,176x80,0,0[176x69,0,0,0,176x10,0,70,3]
+      #layout: 533f,176x80,0,0[176x69,0,0,0,176x10,0,70,3]
+      layout: 103a,356x79,0,0[356x63,0,0,0,356x15,0,64{171x15,0,64,2,184x15,172,64,4}]
       panes:
-        - vim .
-        - #empty
+        - vim
+        - 
+        - profanity
   - vagrant:
-      layout: main-horizontal
-      panes:
-        - vagrant: vagrant up && vagrant ssh default
-  - server:
-      layout: vertical
+      layout: even-horizontal
+      #layout: 533f,176x80,0,0[176x69,0,0,0,176x10,0,70,3]
       panes:
         - logs: ./artisan tail
-        #- web: ./artisan serve
-        #- selenium: phantomjs --webdriver=4444
-        #- logs: tail -f app/storage/logs/laravel.log
+        - vagrant:
+          - vagrant up
+          - vagrant ssh default

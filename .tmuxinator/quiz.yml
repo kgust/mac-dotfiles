@@ -19,7 +19,7 @@ root: ~/Sites/quiz/
 # tmux_command: byobu
 
 windows:
-  - editor:
+  - editor: vim
   - server:
      panes:
        - jekyll: jekyll serve -w
