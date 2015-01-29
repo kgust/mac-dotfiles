@@ -1,7 +1,7 @@
 # ~/.tmuxinator/ctksound.yml
 
-name: ctksound
-root: ~/Sites/ctksound
+name: Christ the King Sound
+root: ~/Sites/ctksound.org
 
 # Optional tmux socket
 # socket_name: foo
@@ -19,5 +19,8 @@ root: ~/Sites/ctksound
 # tmux_command: byobu
 
 windows:
-  - editor: vim 2014/_posts/
-  - server: jekyll serve -w
+  - editor:
+      layout: even-horizontal
+      panes:
+        - vim
+        - jekyll serve -w

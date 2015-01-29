@@ -13,3 +13,4 @@ alias -s php=php
 alias -s rb=ruby
 
 alias myapp-composer="docker run --privileged=true --volumes-from myapp-data --rm dylanlindgren/docker-laravel-composer"
+alias dangling="docker images -f 'dangling=true' -q"

@@ -19,7 +19,8 @@ cache
 logs
 .sass-cache
 .ruby*
-.rvrc
-.rvm*
+!.ruby-version
+#.rvrc
+#.rvm*
 node_modules/
 *.zip

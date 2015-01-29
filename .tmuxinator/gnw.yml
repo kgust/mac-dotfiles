@@ -20,17 +20,16 @@ root: ~/Sites/gonorth-websites
 
 windows:
   - editor:
-      #layout: 533f,176x80,0,0[176x69,0,0,0,176x10,0,70,3]
-      layout: 103a,356x79,0,0[356x63,0,0,0,356x15,0,64{171x15,0,64,2,184x15,172,64,4}]
+      layout: 3135,356x80,0,0[356x69,0,0{231x69,0,0,0,124x69,232,0,6},356x10,0,70{217x10,0,70,2,138x10,218,70,3}]
       panes:
         - vim
-        - 
-        - profanity
-  - vagrant:
-      layout: even-horizontal
-      #layout: 533f,176x80,0,0[176x69,0,0,0,176x10,0,70,3]
-      panes:
-        - logs: ./artisan tail
         - vagrant:
           - vagrant up
           - vagrant ssh default
+        - vtop --theme becca
+        - profanity
+  - vagrant:
+      layout: even-horizontal
+      panes:
+        - logs: ./artisan tail
+        -
