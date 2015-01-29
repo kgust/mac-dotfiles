@@ -120,6 +120,9 @@ install xz
 install zlib
 install zsh-completions
 
+#install profanity --with-terminal-notifier
+#install --HEAD neovim
+
 install ack
 install vim --override-system-vi
 tap homebrew/versions
