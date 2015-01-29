@@ -15,6 +15,9 @@
     ;pager = less -x4
     ;whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 
+[credential]
+	helper = osxkeychain
+
 [alias]
     ; Github CLI
     version = version
