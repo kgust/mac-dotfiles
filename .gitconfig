@@ -1,7 +1,7 @@
 ; vim: set noet ts=4 sw=4 sts=4
 ; Use `git config --list` to see all options.
 [user]
-    name = Kevin Gustavson
+	name = Kevin Gustavson
     ;email = user@example.com
 
 [github]
@@ -11,7 +11,7 @@
     ;autocrlf = true
     ;editor = mvim -f --nomru -c \"au VimLeave * !open -a iTerm\"
     editor = mvim -v
-    excludesfile = /Users/kevin/.gitignore_global
+	excludesfile = /Users/kevin/.gitignore_global
     ;pager = less -x4
     ;whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 
@@ -67,6 +67,7 @@
     pop = stash pop --index
     preview = log --oneline origin..HEAD 
     prune-all = !git remote | xargs -n 1 git remote prune
+	pull = pull --rebase --prune
     rpo = remote prune origin
     s = status
     ss = status -s
@@ -152,11 +153,10 @@
     smudge = git media smudge %f
     required = true
 [difftool "sourcetree"]
-    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-    path = 
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 [mergetool "sourcetree"]
-    cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.0.3/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-    trustExitCode = true
+	cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.0.4/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
 [mergetool "splice"]
     cmd = "mvim -f $BASE $LOCAL $REMOTE $MERGED -c 'SpliceInit'"
     trustExitCode = true
