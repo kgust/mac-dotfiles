@@ -104,18 +104,13 @@ eval "$(direnv hook $0)"
 
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
-# Docker
-#export DOCKER_CERT_PATH=/Users/kgustavson/.boot2docker/certs/boot2docker-vm
-#export DOCKER_TLS_VERIFY=1
-#export DOCKER_HOST=tcp://192.168.59.103:2376
-#export DOCKER_HOST=tcp://172.17.8.101:2375
-
-# fleetctl
-export ETCDCTL_PEERS=http://172.17.8.101:4001
-export FLEETCTL_ENDPOINT=http://172.17.8.101:4001
-[[ -d $HOME/coreos-osx/bin ]] && PATH=$PATH:$HOME/coreos-osx/bin
 
 # Boot2Docker
-export DOCKER_TLS_VERIFY=1
-export DOCKER_HOST=tcp://192.168.59.103:2376
 export DOCKER_CERT_PATH=/Users/kevin/.boot2docker/certs/boot2docker-vm
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_TLS_VERIFY=1
+
+# fleetctl
+export FLEETCTL_ENDPOINT=http://172.17.8.101:4001
+export ETCDCTL_PEERS=http://172.17.8.101:4001
+[[ -d $HOME/coreos-osx/bin ]] && PATH=$PATH:$HOME/coreos-osx/bin

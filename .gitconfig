@@ -1,162 +1,166 @@
-; vim: set noet ts=4 sw=4 sts=4
+; vim: set noet ts=4 sw=4 sts=4 nolist
 ; Use `git config --list` to see all options.
 [user]
 	name = Kevin Gustavson
-    ;email = user@example.com
+	;email = user@example.com
 
 [github]
-    user = kgust
+	user = kgust
 
 [core]
-    ;autocrlf = true
-    ;editor = mvim -f --nomru -c \"au VimLeave * !open -a iTerm\"
-    editor = mvim -v
+	;autocrlf = true
+	;editor = mvim -f --nomru -c \"au VimLeave * !open -a iTerm\"
+	editor = mvim -v
 	excludesfile = /Users/kevin/.gitignore_global
-    ;pager = less -x4
-    ;whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	;pager = less -x4
+	;whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 
 [credential]
 	helper = osxkeychain
 
 [alias]
-    ; Github CLI
-    version = version
-    pull-request = pull-request
-    fork = fork
-    create = create
-    browse = browse
-    compare = compare
-    ci-status = ci-status
-    ; release = release ;gh command only
-    ; issues = issues   ;gh command only
+	; Github CLI
+	version = version
+	pull-request = pull-request
+	fork = fork
+	create = create
+	browse = browse
+	compare = compare
+	ci-status = ci-status
+	; release = release ;gh command only
+	; issues = issues   ;gh command only
 
-    ; Regular
-    add-conflicted = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
-    add-untracked = !"git status --porcelain | awk '/\\?\\?/{ print $2 }' | xargs git add"
-    aliases = !git config -l | grep alias | cut -c 7-
-    amend = commit --amend
-    assume = update-index --assume-unchanged
-    ;br = branch
-    changes = diff --name-status -r
-    ;ci = commit
-    co = checkout
-    d = diff
-    dc = diff --cached
-    diffstat = diff --stat -r
-    ;dl = !git ll -1
-    dw = diff --word-diff
-    edit-conflicted = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; mvim -v -f `f`"
-    edit-modified = !mvim -v -f $(git ls-files -m)
-    gitkconflict = !gitk --left-right HEAD...MERGE_HEAD
-    graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f > /tmp/result.dot ; open /tmp/result.dot"
-    ign = ls-files -o -i --exclude-standard
-    ;invisible = update-index --assume-unchanged
-    invisible = update-index --skip-worktree
-    k = !gitk
-    last = log -1 HEAD
-    lasttag = describe --tags --abbrev=0
-    lc = log ORIG_HEAD.. --stat --no-merges
-    lg = log -p
-    lol = log --graph --decorate --pretty=oneline --abbrev-commit
-    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-    lp  = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-    ls = ls-files
-    lu = log -u
-    new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
-    ours = !f() { git co --ours $@ && git add $@; }; f
-    pop = stash pop --index
-    preview = log --oneline origin..HEAD 
-    prune-all = !git remote | xargs -n 1 git remote prune
+	; Regular
+	add-conflicted = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
+	add-untracked = !"git status --porcelain | awk '/\\?\\?/{ print $2 }' | xargs git add"
+	aliases = !git config -l | grep alias | cut -c 7-
+	amend = commit --amend
+	assume = update-index --assume-unchanged
+	;br = branch
+	changes = diff --name-status -r
+	;ci = commit
+	co = checkout
+	d = diff
+	dc = diff --cached
+	delete-merged = "!git checkout master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+	diffstat = diff --stat -r
+	;dl = !git ll -1
+	dw = diff --word-diff
+	edit-conflicted = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; mvim -v -f `f`"
+	edit-modified = !mvim -v -f $(git ls-files -m)
+	gitkconflict = !gitk --left-right HEAD...MERGE_HEAD
+	graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f > /tmp/result.dot ; open /tmp/result.dot"
+	ign = ls-files -o -i --exclude-standard
+	;invisible = update-index --assume-unchanged
+	invisible = update-index --skip-worktree
+	k = !gitk
+	last = log -1 HEAD
+	lasttag = describe --tags --abbrev=0
+	lc = log ORIG_HEAD.. --stat --no-merges
+	lg = log -p
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	lp  = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	ls = ls-files
+	lu = log -u
+	new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
+	ours = !f() { git co --ours $@ && git add $@; }; f
+	pop = stash pop --index
+	preview = log --oneline origin..HEAD 
+	prune-all = !git remote | xargs -n 1 git remote prune
 	pull = pull --rebase --prune
-    rpo = remote prune origin
-    s = status
-    ss = status -s
-    serve = daemon --reuseaddr --verbose --base-path=. --export-all ./.git
-    sta = stash --all
-    stu = stash --untracked
-    tig = !tig
-    test = !phpunit -c app --colors
-    theirs = !f() { git co --theirs $@ && git add $@; }; f
-    unassume = update-index --no-assume-unchanged
-    undo = reset --hard
-    ;visible = update-index --no-assume-unchanged
-    visible = update-index --no-skip-worktree
-    who = shortlog -s --
-    whois = "!sh -c 'git log -i -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -"
-    whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
-    whitespace = !git diff --check $(git hash-object -t tree /dev/null)
+	rpo = remote prune origin
+	s = status
+	ss = status -s
+	serve = daemon --reuseaddr --verbose --base-path=. --export-all ./.git
+	sta = stash --all
+	stu = stash --untracked
+	tig = !tig
+	test = !phpunit -c app --colors
+	theirs = !f() { git co --theirs $@ && git add $@; }; f
+	unassume = update-index --no-assume-unchanged
+	undo = reset --hard
+	#up = pull --rebase --prune
+	up = !sh -c 'git pull --rebase --prune && git log --pretty=format:\"%Cred%ae %Creset- %C(yellow)%s %Creset(%ar)\" HEAD@{1}..'
+	;visible = update-index --no-assume-unchanged
+	visible = update-index --no-skip-worktree
+	who = shortlog -s --
+	whois = "!sh -c 'git log -i -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -"
+	whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
+	whitespace = !git diff --check $(git hash-object -t tree /dev/null)
 
 [apply]
-    whitespace = warn
+	whitespace = warn
 
 [branch]
-    autosetupmerge = always
-    ;autosetuprebase = always
+	autosetupmerge = always
+	;autosetuprebase = always
 
 [color]
-    branch = auto
-    diff = auto
-    status = auto
-    ui = auto
-    ;ui = true
+	branch = auto
+	diff = auto
+	status = auto
+	ui = auto
+	;ui = true
 
 [color "branch"]
-    current = yellow reverse
-    local = yellow
-    remote = green
+	current = yellow reverse
+	local = yellow
+	remote = green
 
 [color "diff"]
-    meta = yellow bold
-    frag = magenta bold
-    old = red bold
-    new = green bold
-    whitespace = red reverse
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
 
 [color "status"]
-    added = yellow
-    changed = green
-    untracked = cyan
+	added = yellow
+	changed = green
+	untracked = cyan
 
 [diff]
-    tool = gvimdiff
-    ;tool = opendiff
+	tool = gvimdiff
+	;tool = opendiff
 
 [pull]
-    default = current
+	default = current
 
 [push]
-    default = simple
-    ;default = matching
-    ;default = upstream
+	default = simple
+	;default = matching
+	;default = upstream
 
 [merge]
-    defaultToUpstream = true
-    tool = gvimdiff
-    tool = opendiff
-    tool = splice
+	defaultToUpstream = true
+	tool = gvimdiff
+	tool = opendiff
+	tool = splice
 
 [rebase]
-    ;autosquash = true
+	;autosquash = true
 
 [web]
-    browser = open
+	browser = open
 
 [instaweb]
-    local = true
-    httpd = apache2 -f
-    port = 4321
-    ;browser = firefox
-    modulepath = /usr/lib/apache2/modules
+	local = true
+	httpd = apache2 -f
+	port = 4321
+	;browser = firefox
+	modulepath = /usr/lib/apache2/modules
 
 [filter "media"]
-    clean = git media clean %f
-    smudge = git media smudge %f
-    required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+	required = true
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 [mergetool "sourcetree"]
 	cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.0.4/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	path = 
 	trustExitCode = true
 [mergetool "splice"]
-    cmd = "mvim -f $BASE $LOCAL $REMOTE $MERGED -c 'SpliceInit'"
-    trustExitCode = true
+	cmd = "mvim -f $BASE $LOCAL $REMOTE $MERGED -c 'SpliceInit'"
+	trustExitCode = true
