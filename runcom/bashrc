@@ -5,8 +5,8 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbi
 PATH=$PATH:$(brew --prefix ruby)/bin
 
 # FIXME This needs to be conditional!
-#set -o vi
-source $HOME/.bash_aliases
+set -o vi
+source $HOME/.aliases
 
 PATH=$PATH:/usr/local/share/python
 
