@@ -1,7 +1,7 @@
 # ~/.tmuxinator/gonorth.yml
 
 name: GoNorth-Websites
-root: ~/Sites/gonorth-websites
+root: ~/Sites/gnw
 
 # Optional tmux socket
 # socket_name: foo
@@ -25,6 +25,7 @@ windows:
         - vim
         - vagrant:
           - vagrant up
+          - clear
           - vagrant ssh default
         - vtop --theme becca
         - profanity

@@ -96,17 +96,13 @@ function r() { grep "$1" ${@:2} -R . }
 
 source $HOME/.aliases
 
-#export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
 # Enable direnv
 eval "$(direnv hook $0)"
 
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
-
 # Boot2Docker
-export DOCKER_CERT_PATH=/Users/kevin/.boot2docker/certs/boot2docker-vm
+export DOCKER_CERT_PATH=$HOME/.boot2docker/certs/boot2docker-vm
 export DOCKER_HOST=tcp://192.168.59.103:2376
 export DOCKER_TLS_VERIFY=1
 
