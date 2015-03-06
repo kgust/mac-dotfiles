@@ -7,80 +7,93 @@ tap caskroom/cask
 tap caskroom/versions
 
 cask install adium
+cask install adobe-digitial-editions
 cask install atext
 cask install atom
-cask install bettertouchtool
-cask install cakebrew
 cask install ccmenu
-#cask install codekit
 cask install colloquy
+cask install dropbox
+cask install evernote
+cask install firefox
 cask install fluid
-#cask install google-chrome
+cask install github
+cask install google-chrome
+cask install google-chrome
 cask install google-chrome-canary
-cask install growl-fork
+cask install google-drive
+cask install google-hangouts
+cask install googleappengine
 cask install handbrake
+cask install hipchat
+cask install java7
 cask install jewelrybox
 cask install launchrocket
+cask install libreoffice
+cask install macvim
 cask install minitimer
-#cask install phpstorm
-cask install phpstorm-eap
+cask install picasa
 cask install rescuetime
-cask install texshop
+cask install sequel-pro
+cask install skype
+cask install sourcetree
+cask install sublime-text3
+cask install synergy
 cask install the-unarchiver
 cask install vagrant
+cask install vimr
 cask install virtualbox
-#cask install voicemac
+cask install xquartz
+cask install vlc
 
-#cask install dropbox
-#cask install evernote
-#cask install firefox
-#cask install flux
-#cask install github
-#cask install google-chrome
-#cask install handbrake
-#cask install crashplan
-#cask install livereload
-#cask install macvim
-#cask install renamer
-#cask install sequel-pro
-#cask install skype
-#cask install sublime-text
-#cask install textexpander
-#cask install vlc
+# cask install bettertouchtool
+# cask install cakebrew
+# cask install codekit
+# cask install crashplan
+# cask install flux
+# cask install google-earth
+# cask install growl-fork
+# cask install handbrake
+# cask install livereload
+# cask install phpstorm
+# cask install phpstorm-eap
+# cask install renamer
+# cask install sublime-text
+# cask install texshop
+# cask install textexpander
 
-#cask install airmail-beta
-#cask install anitrsi
-#cask install beamer
-#cask install betterzip
-#cask install boxer
-#cask install carbon-copy-cloner
-#cask install changes
-#cask install cloudup
-#cask install codekit
-#cask install colorschemer-studio
-#cask install divvy
-#cask install flowdock
-#cask install geekbench
-#cask install gitbox
-#cask install google-earth
-#cask install istat-menus
-#cask install join-me
-#cask install kaleidoscope
-#cask install keyboardcleantool
-#cask install limechat
-#cask install macvim
-#cask install mamp
-#cask install mixxx
-#cask install node-webkit
-#cask install onyx
-#cask install postbox
-#cask install puush
-#cask install rdio
-#cask install sauce
-#cask install sourcetree
-#cask install the-unarchiver
-#cask install totalfinder
-#cask install transmission
-#cask install transmit
-#cask install viscosity
-#cask install zepheer
+# cask install airmail-beta
+# cask install anitrsi
+# cask install beamer
+# cask install betterzip
+# cask install boxer
+# cask install carbon-copy-cloner
+# cask install changes
+# cask install cloudup
+# cask install codekit
+# cask install colorschemer-studio
+# cask install divvy
+# cask install flowdock
+# cask install geekbench
+# cask install gitbox
+# cask install google-earth
+# cask install istat-menus
+# cask install join-me
+# cask install kaleidoscope
+# cask install keyboardcleantool
+# cask install limechat
+# cask install macvim
+# cask install mamp
+# cask install mixxx
+# cask install node-webkit
+# cask install onyx
+# cask install postbox
+# cask install puush
+# cask install rdio
+# cask install sauce
+# cask install sourcetree
+# cask install the-unarchiver
+# cask install totalfinder
+# cask install transmission
+# cask install transmit
+# cask install viscosity
+# cask install zepheer
