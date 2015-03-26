@@ -4,7 +4,7 @@ name: GoNorth-Websites
 root: ~/Sites/gnw
 
 # Optional tmux socket
-# socket_name: foo
+socket_name: gnw
 
 # Runs before everything. Use it to start daemons etc.
 # pre: sudo /etc/rc.d/mysqld start

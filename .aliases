@@ -1,0 +1,24 @@
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Suffix aliases
+alias -s js=node
+alias -s php=php
+alias -s phar=php
+alias -s rb=ruby
+
+alias myapp-composer="docker run --privileged=true --volumes-from myapp-data --rm dylanlindgren/docker-laravel-composer"
+alias dangling="docker images -f 'dangling=true' -q"
+
+alias gn="vim -c Geeknote"
+
+alias g=git
+alias gk=gitk
+alias gco="git checkout"
+alias gs="git status"
